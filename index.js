@@ -15,10 +15,14 @@ app.get('/', function (req, res) {
 })
 
 app.post('/weather', function (req, res) {
+  console.log("params: " + req.params)
   console.log("post equest received")
+
+
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(msg));
 })
+
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log('Example app listening on port 3000!')
