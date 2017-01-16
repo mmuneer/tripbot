@@ -15,8 +15,9 @@ app.get('/', function (req, res) {
 })
 
 app.post('/weather', function (req, res) {
-  console.log("params: " + req.params)
   console.log("post equest received")
+  str = JSON.stringify(req.params)
+  console.log("params: " + str)
 
 
   res.setHeader('Content-Type', 'application/json');
