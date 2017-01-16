@@ -9,7 +9,13 @@ var msg = {
 }
 
 app.get('/', function (req, res) {
-  console.log("request received")
+  console.log("get equest received")
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify(msg));
+})
+
+app.post('/weather', function (req, res) {
+  console.log("post equest received")
   res.setHeader('Content-Type', 'application/json');
   res.send(JSON.stringify(msg));
 })
